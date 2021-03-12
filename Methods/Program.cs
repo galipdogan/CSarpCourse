@@ -17,13 +17,18 @@ namespace Methods
             //Add();
             //var result= Add2(20, 30);
 
-            int number1 = 20;
-            int number2 = 100;
-            var result2 = Add3(ref number1, number2);
+            //int number1;
+            //int number2 = 100;
+            //var result2 = Add3(out number1, number2);
 
 
-            Console.WriteLine(result2);
-            Console.WriteLine(number1);
+            //Console.WriteLine(result2);
+            //Console.WriteLine(number1);
+
+
+            Console.WriteLine(Multiply(2,4));
+            Console.WriteLine(Multiply(2,4,5));
+            Console.WriteLine(Add4(1,2,3,4,5,6));
             Console.ReadLine();
         }
 
@@ -42,14 +47,35 @@ namespace Methods
 
         }
 
-        static int Add3(ref int number1,int number2)
+        static int Add3(out int number1,int number2)
         {
             number1 = 30;
             return number1 + number2;
         }
+
+        /*Method overloading*/
+        /*aynı veri tipini döndüren ancak fazla yada eksik parametre alan metodların isimlerini aynı verebiliriz.*/
+        static int Multiply(int number1, int number2)
+        {
+            return number1 * number2;
+        }
+        static int Multiply(int number1, int number2,int number3)
+        {
+            return number1 * number2*number3;
+        }
+
+
+        /*Params keyword ile çalışmak birden aynı tipte overload olması durumunda kullanılır. büyük projelerde*/
+        static int Add4(int number,params int[] numbers ) // Params metodun son parametresi olarak kullanılabilir. 
+        {
+            return numbers.Sum();
+        }
+     
     }
 }
 
 /*Değer tipler değerin kendisi ile ilgilenir. Referans ise sadece işaret edicidir*/
 /*ref keyword ekleyerek number1 değişkenin referansını değiştirip eskiden 20 olan değeri artık add3 teki number1 gösteriri ve yeni değeri 30 olur
  buda değer tip değerinin referans tip olarak değiştirilmesini sağlar.*/
+
+/*ref de number1 değişkeni set edilip 20 yazıldı ancak out keywordunda buna gerek yoktur. aradaki fark da budur.*/
