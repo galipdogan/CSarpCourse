@@ -24,6 +24,7 @@ namespace Ders3Odev2
             Console.WriteLine(result2);
             // Console.ReadLine();   
         }
+
         static int Addref(ref int number1, int number2)
         {
             //number1=30; //number1 burada yeni değeri 30 artık
@@ -38,3 +39,4 @@ namespace Ders3Odev2
         }
 
     }
+}
