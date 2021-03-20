@@ -19,7 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecapDemo1", "RecapDemo1\Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{E485B5B3-9E71-43D4-A269-FB4116FF358E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesDemo", "InterfacesDemo\InterfacesDemo.csproj", "{F3312540-2016-41AF-9793-54CA9CDD6B27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesDemo", "InterfacesDemo\InterfacesDemo.csproj", "{F3312540-2016-41AF-9793-54CA9CDD6B27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{AA8AA78D-B177-400C-806F-D03A859D2B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{96F652E1-3325-43C5-BF7A-567F6795F1BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{F3312540-2016-41AF-9793-54CA9CDD6B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3312540-2016-41AF-9793-54CA9CDD6B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3312540-2016-41AF-9793-54CA9CDD6B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8AA78D-B177-400C-806F-D03A859D2B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8AA78D-B177-400C-806F-D03A859D2B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8AA78D-B177-400C-806F-D03A859D2B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8AA78D-B177-400C-806F-D03A859D2B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F652E1-3325-43C5-BF7A-567F6795F1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F652E1-3325-43C5-BF7A-567F6795F1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F652E1-3325-43C5-BF7A-567F6795F1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F652E1-3325-43C5-BF7A-567F6795F1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
