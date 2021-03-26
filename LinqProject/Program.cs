@@ -24,12 +24,12 @@ namespace LinqProject
                 new Product
                 {
                     ProductId = 2, CategoryId = 1, ProductName = "Asus Laptop", QuantityPerUnit = "16 Gb Ram",
-                    UnitPrice = 8000, UnitInStock = 3
+                    UnitPrice = 18000, UnitInStock = 3
                 },
                 new Product
                 {
                     ProductId = 3, CategoryId = 1, ProductName = "Hp Laptop", QuantityPerUnit = "8 Gb Ram",
-                    UnitPrice = 6000, UnitInStock = 2
+                    UnitPrice = 18000, UnitInStock = 2
                 },
                 new Product
                 {
@@ -42,7 +42,80 @@ namespace LinqProject
                     UnitPrice = 8000, UnitInStock = 0
                 },
             };
-            Console.WriteLine("Algoritmeik ------------------------------------");
+            //Test(products);
+
+            //GetProducts(products);
+            // GetProductsLinq(products);
+
+            //AnyTest(products);
+
+            //FindTest(products);
+
+            //FindAllTest(products);
+            //AscDecsTest(products);
+            //ClassicLinqTest(products);
+
+            var result = from p in products
+                join c in categories
+                    on p.CategoryId equals c.CategoryId
+                    where p.UnitPrice>5000 orderby  p.UnitPrice descending 
+                select new ProductDto
+                {
+                    ProductId = p.ProductId, CategoryName = c.CategoryName, ProductName = p.ProductName,
+                    UnitPrice = p.UnitPrice
+                };
+
+            foreach (var productDto in result)
+            {
+                Console.WriteLine("{0} ----- {1}",productDto.ProductName,productDto.CategoryName);//{}{} string şablonu kullanımı
+            }
+        }
+
+        private static void ClassicLinqTest(List<Product> products)
+        {
+            var result = from p in products
+                         where p.UnitPrice > 6000
+                         orderby p.UnitPrice descending, p.ProductName ascending
+                         select new ProductDto { ProductId = p.ProductId, ProductName = p.ProductName, UnitPrice = p.UnitPrice };
+
+            foreach (var p in result)
+            {
+                Console.WriteLine(p.ProductName);
+            }
+        }
+
+        //Single Line query
+        private static void AscDecsTest(List<Product> products)
+        {
+            var result = products.Where(p => p.ProductName.Contains("top")).OrderByDescending(p => p.UnitPrice)
+                .ThenByDescending(p => p.ProductName);
+            foreach (var product in result)
+            {
+                Console.WriteLine(product.ProductName);
+            }
+        }
+
+        private static void FindAllTest(List<Product> products)
+        {
+            var result = products.FindAll(p => p.ProductName.Contains("top"));
+            Console.WriteLine(result);
+        }
+
+        private static void FindTest(List<Product> products)
+        {
+            var result = products.Find(p => p.ProductId == 3);
+            Console.WriteLine(result);
+        }
+
+        private static void AnyTest(List<Product> products)
+        {
+            var result = products.Any(p => p.ProductName == "Asus  Laptop");
+            Console.WriteLine(result);
+        }
+
+        private static void Test(List<Product> products)
+        {
+            Console.WriteLine("Algoritmik ------------------------------------");
             //Listeden getirmeye çalışıyoruz.Bunun yerine linq kullanıyoruz
             foreach (var product in products)
             {
@@ -58,12 +131,7 @@ namespace LinqProject
             foreach (var p in result)
             {
                 Console.WriteLine(p.ProductName);
-                
             }
-
-            GetProducts(products);
-            GetProductsLinq(products);
-
         }
 
         static List<Product> GetProducts(List<Product> products)
@@ -78,14 +146,22 @@ namespace LinqProject
             }
 
             return filteredProducts;
-           
+
         }
 
         static List<Product> GetProductsLinq(List<Product> products)
         {
             return products.Where(p => p.UnitPrice > 5000 && p.UnitInStock > 3).ToList();
-            
+
         }
+    }
+
+    class ProductDto
+    {
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public string CategoryName { get; set; }
+        public decimal UnitPrice { get; set; }
     }
 
     class Product
