@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesDemo", "Interface
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{AA8AA78D-B177-400C-806F-D03A859D2B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{96F652E1-3325-43C5-BF7A-567F6795F1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{96F652E1-3325-43C5-BF7A-567F6795F1BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClass", "AbstractClass\AbstractClass.csproj", "{A450588B-56E3-4F56-931E-13E61B1870C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClass", "AbstractClass\AbstractClass.csproj", "{A450588B-56E3-4F56-931E-13E61B1870C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqProject", "LinqProject\LinqProject.csproj", "{8B2DF6CD-8A31-46F6-A866-ABF46F39825D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{A450588B-56E3-4F56-931E-13E61B1870C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A450588B-56E3-4F56-931E-13E61B1870C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A450588B-56E3-4F56-931E-13E61B1870C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2DF6CD-8A31-46F6-A866-ABF46F39825D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2DF6CD-8A31-46F6-A866-ABF46F39825D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2DF6CD-8A31-46F6-A866-ABF46F39825D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2DF6CD-8A31-46F6-A866-ABF46F39825D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
